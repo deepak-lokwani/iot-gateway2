@@ -2,8 +2,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>schooldomain.studentname.connecteddevices</groupId>
-	<artifactId>studentname-connected-devices-java</artifactId>
+	<groupId>neu.dlokwani.connecteddevices</groupId>
+	<artifactId>dlokwani-connected-devices-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Schoolname - Studentname - Connected Devices (Java)</name>
 	<description>Java-based lab modules for the Connected Devices IoT course.</description>
@@ -127,7 +127,7 @@
 							<archive>
 								<manifest>
 									<addClasspath>true</addClasspath>
-									<mainClass>schooldomain.studentname.connecteddevices.labs.module01.SystemPerformanceApp</mainClass>
+									<mainClass>neu.dlokwani.connecteddevices.labs.module01.SystemPerformanceApp</mainClass>
 									<classpathPrefix>dep-libs/</classpathPrefix>
 								</manifest>
 							</archive>
