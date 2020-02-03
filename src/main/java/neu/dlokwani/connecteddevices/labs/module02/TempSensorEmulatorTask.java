@@ -35,7 +35,7 @@ public class TempSensorEmulatorTask {
 	float alertDiff = 3;
 	float curValue;
 	boolean enableEmulator = false;
-	int timeInterval = 6;
+	int timeInterval = 60;
 	
 	/*
 	 * This sets my emulator to ON
