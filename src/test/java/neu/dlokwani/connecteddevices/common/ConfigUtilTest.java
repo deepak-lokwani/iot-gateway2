@@ -4,6 +4,8 @@
 
 package neu.dlokwani.connecteddevices.common;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,7 +25,7 @@ public class ConfigUtilTest
 {
 	// static
 	
-	public static final String DIR_PREFIX = "./sample/";
+	public static final String DIR_PREFIX = "C:/Users/deepa/git/workspace/iot-gateway/config/";
 	
 	public static final String TEST_VALID_CFG_FILE   = DIR_PREFIX + "ConnectedDevicesConfig.props";
 	
@@ -37,7 +39,7 @@ public class ConfigUtilTest
 	{
 		// make sure test files exist
 //		assertTrue(_validTestFile.exists());
-//		assertTrue(ConfigUtil.getInstance().loadConfig(TEST_VALID_CFG_FILE));
+		assertTrue(ConfigUtil.getInstance().loadConfig(TEST_VALID_CFG_FILE));
 	}
 	
 	// test methods

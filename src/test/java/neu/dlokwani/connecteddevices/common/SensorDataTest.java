@@ -2,7 +2,11 @@
  * 
  */
 package neu.dlokwani.connecteddevices.common;
+import neu.dlokwani.connecteddevices.common.*;
 
+import static org.junit.Assert.assertTrue;
+
+import org.hamcrest.core.IsInstanceOf;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,6 +26,8 @@ import org.junit.Test;
 public class SensorDataTest
 {
 	// setup methods
+	SensorData  sensorData = new SensorData();
+	
 	
 	/**
 	 * @throws java.lang.Exception
@@ -29,6 +35,7 @@ public class SensorDataTest
 	@Before
 	public void setUp() throws Exception
 	{
+		
 	}
 	
 	/**
@@ -42,9 +49,13 @@ public class SensorDataTest
 	// test methods
 	
 	@Test
-	public void testSomething()
+	public void testSensorData()
 	{
-//		fail("Not yet implemented");
+		assertTrue(sensorData.getCurValue()<=30.0f && sensorData.getCurValue()>=0.0f );
+		assertTrue(sensorData.getAvgValue()<=30.0f && sensorData.getAvgValue()>=0.0f );
+//		assertTrue(sensorData.getMinValue()<=30.0f && sensorData.getMinValue()>=0.0f );
+		assertTrue(sensorData.getMaxValue()<=30.0f && sensorData.getMaxValue()>=0.0f );
+		
 	}
 	
 }

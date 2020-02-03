@@ -3,9 +3,12 @@
  */
 package neu.dlokwani.connecteddevices.labs;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import neu.dlokwani.connecteddevices.labs.module02.*;
 
 /**
  * Test class for all requisite Module02 functionality.
@@ -21,7 +24,9 @@ import org.junit.Test;
  */
 public class Module02Test
 {
-	// setup methods
+	TempSensorEmulatorTask tempSen = new TempSensorEmulatorTask();
+	SMTPClientConnector smt = new SMTPClientConnector();
+	
 	
 	/**
 	 * @throws java.lang.Exception
@@ -45,9 +50,10 @@ public class Module02Test
 	 * 
 	 */
 	@Test
-	public void testSomething()
+	public void testSMTPCLientConnector()
 	{
-//		fail("Not yet implemented");
+		String string1 = "Hello, Data";
+		assertTrue(smt.publishMessage("This ais a Test", string1.getBytes()));
 	}
 	
 }
