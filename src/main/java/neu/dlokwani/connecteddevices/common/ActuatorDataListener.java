@@ -7,6 +7,9 @@ package neu.dlokwani.connecteddevices.common;
  * 
  */
 
+/*
+ * this class is responsible for the writing the actuator data on the file
+ */
 public class ActuatorDataListener {
 
 	public ActuatorDataListener() {

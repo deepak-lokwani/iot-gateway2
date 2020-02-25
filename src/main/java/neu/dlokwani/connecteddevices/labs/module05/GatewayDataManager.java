@@ -8,6 +8,10 @@ import neu.dlokwani.connecteddevices.common.PersistenceUtil;
  * NUID: 001316769
  * 
  */
+
+/*
+ * this class is responsible for the Data management from the gateway end
+ */
 public class GatewayDataManager extends Thread {
 	
 	//Creating Variables

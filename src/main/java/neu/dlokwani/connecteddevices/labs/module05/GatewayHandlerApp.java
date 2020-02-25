@@ -7,7 +7,11 @@ import neu.dlokwani.connecteddevices.labs.module05.GatewayDataManager;
  * 
  */
 
-//Public Class extending from BaseDeviceApp
+/*
+ * this class is the main class and starts the thread
+ */
+
+
 public class GatewayHandlerApp {
 	
 	//Main Method

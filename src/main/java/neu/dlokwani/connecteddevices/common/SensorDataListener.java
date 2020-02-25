@@ -6,7 +6,9 @@ import neu.dlokwani.connecteddevices.common.DataUtil;
  * NUID: 001316769
  * 
  */
-
+/*
+ * This class listens to the sensor data on the DBMS and actuates the signal if the threshold are crossed
+ */
 public class SensorDataListener {
 
 	public SensorDataListener() {

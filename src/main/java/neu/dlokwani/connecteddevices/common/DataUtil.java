@@ -21,6 +21,9 @@ public class DataUtil {
 		// TODO Auto-generated constructor stub
 	}
 
+	/*
+	 * Method to convert SensorData to Json
+	 */
 	public String toJsonFromSensorData (SensorData sensorData) {
 		
 		String jsonData = null;
@@ -31,6 +34,9 @@ public class DataUtil {
 		return jsonData;
 	}
 	
+	/*
+	 * Method to convert from Json to SensorData
+	 */
 	public SensorData toSensorDataFromJson(String jsonData) {
 		SensorData sensorData = null;
 		if(jsonData != null && jsonData.trim().length() > 0) {
@@ -40,6 +46,9 @@ public class DataUtil {
 		return sensorData;
 	}
 	
+	/*
+	 * Method to convert SensorData to a file
+	 */
 	public boolean writeSensorDatatoFile(SensorData sensorData) {
 		String jsonData = null;
 		if(sensorData != null) {
@@ -47,7 +56,7 @@ public class DataUtil {
 			jsonData = gson.toJson(sensorData);
 		}
 		try {
-			file = new FileWriter("json_SensorData.txt", utf-8);
+			file = new FileWriter("json_SensorData.txt");
 			file.append(jsonData);
 			return true;
 		}catch(IOException e) {
@@ -56,6 +65,9 @@ public class DataUtil {
 		}
 	}
 	
+	/*
+	 * Method to convert from Json to ActuatorData
+	 */
 	public String toJsonFromActuatorData(ActuatorData actuatorData) {
 		String jsonData = null;
 		if(actuatorData != null) {

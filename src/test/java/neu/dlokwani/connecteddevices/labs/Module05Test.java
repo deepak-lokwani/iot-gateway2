@@ -2,6 +2,9 @@
  * 
  */
 package neu.dlokwani.connecteddevices.labs;
+import neu.dlokwani.connecteddevices.common.*;
+
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -21,7 +24,7 @@ import org.junit.Test;
  */
 public class Module05Test
 {
-	// setup methods
+	
 	
 	/**
 	 * @throws java.lang.Exception
@@ -29,6 +32,7 @@ public class Module05Test
 	@Before
 	public void setUp() throws Exception
 	{
+		
 	}
 	
 	/**
@@ -45,9 +49,26 @@ public class Module05Test
 	 * 
 	 */
 	@Test
-	public void testSomething()
+	public void testWriteSensorDataToFile()
 	{
-//		fail("Not yet implemented");
+		DataUtil dataUtil = new DataUtil();
+		SensorData sensorData =  new SensorData();
+		
+		
+		boolean x = dataUtil.writeSensorDatatoFile(sensorData);
+		assertTrue(x);
+		
 	}
 	
+	@Test
+	public void testWriteActuatorDataToFile()
+	{
+		DataUtil dataUtil = new DataUtil();
+		SensorData sensorData =  new SensorData();
+		ActuatorData actData = new ActuatorData();
+		
+		
+		boolean y = dataUtil.writeActuatorDatatofile(actData);
+		assertTrue(y);
+	}
 }
