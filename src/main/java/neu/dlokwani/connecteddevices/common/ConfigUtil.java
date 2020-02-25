@@ -13,6 +13,11 @@ import org.apache.commons.configuration.*;
 import neu.dlokwani.connecteddevices.common.ConfigConst;
 
 /*
+ * @author: Deepak lokwani
+ * NUID: 001316769
+ * 
+ */
+/*
  *@param isLoaded: is a boolean indicator to verify if the configurations are loaded  
  */
 public class ConfigUtil {
