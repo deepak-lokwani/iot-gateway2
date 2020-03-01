@@ -66,7 +66,7 @@ public class DataUtil {
 	}
 	
 	/*
-	 * Method to convert from Json to ActuatorData
+	 * Method to convert to Json from ActuatorData
 	 */
 	public String toJsonFromActuatorData(ActuatorData actuatorData) {
 		String jsonData = null;
@@ -77,6 +77,9 @@ public class DataUtil {
 		return jsonData;
 	}
 	
+	/*
+	 * Method to convert from Json to ActuatorData
+	 */
 	public ActuatorData toActuatorDataFromJson(String jsonData)
 	{
 		ActuatorData actuatorData = null;
@@ -87,6 +90,9 @@ public class DataUtil {
 		return actuatorData;
 	}
 	
+	/*
+	 * Method to convert ActuatorData to a file
+	 */
 	public boolean writeActuatorDatatofile(ActuatorData actuatorData) {
 		String jsonData = null;
 		if(actuatorData != null) {

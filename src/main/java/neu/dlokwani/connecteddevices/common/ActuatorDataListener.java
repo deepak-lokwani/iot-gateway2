@@ -16,6 +16,9 @@ public class ActuatorDataListener {
 		// TODO Auto-generated constructor stub
 	}
 	
+	/*
+	 * This method  is  used for writing ActuatorData to the file
+	 */
 	public void OnMessage() {
 		DataUtil dataUtil = new DataUtil();
 		ActuatorData actuatorData = new ActuatorData();

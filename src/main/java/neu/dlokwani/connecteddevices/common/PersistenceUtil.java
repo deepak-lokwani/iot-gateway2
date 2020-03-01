@@ -14,6 +14,9 @@ import redis.clients.jedis.JedisPubSub;
  */
 public class PersistenceUtil {
 
+	/*
+	 * Initializing my variables and instances
+	 */
 	Jedis jedis = new Jedis("redis-11983.c57.us-east-1-4.ec2.cloud.redislabs.com", 11983);
 	ActuatorDataListener actuatorDataListener = new ActuatorDataListener();
 	SensorDataListener sensorDataListener = new SensorDataListener();
@@ -22,18 +25,19 @@ public class PersistenceUtil {
 	/* 
 	 * method to write Actuator data to DBMS
 	 */
-	public void writeActuatorDataToDbms(ActuatorData actuatorData) {
+	public boolean writeActuatorDataToDbms(ActuatorData actuatorData) {
 		jedis.auth("12345678");
 		String jsonDataActuator = dataUtil.toJsonFromActuatorData(actuatorData);
 		jedis.publish("ActuatorData", jsonDataActuator);
 		registerActuatorDataToDbmsListener();
 		jedis.close();
+		return true;
 	}
 
 	/*
 	 *  Method to subscribe sensor data channel from DBMS
 	 */
-	public void writeSensorDataToDbms() {
+	public boolean writeSensorDataToDbms() {
 		jedis.auth("12345678");
 		jedis.subscribe(new JedisPubSub() {
 			SensorData sensorData = new SensorData();
@@ -48,6 +52,7 @@ public class PersistenceUtil {
 			}
 		}, "SensorData");
 		jedis.close();
+		return true;
 	}
 
 	/*

@@ -1,7 +1,7 @@
 package neu.dlokwani.connecteddevices.common;
 
 /*
- * @author: Deepak lokwani
+ * @author: Deepak Lokwani
  * NUID: 001316769
  * 
  */

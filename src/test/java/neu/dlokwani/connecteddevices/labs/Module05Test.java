@@ -46,7 +46,7 @@ public class Module05Test
 	// test methods
 	
 	/**
-	 * 
+	 * Testing of the function to write the data in a file 
 	 */
 	@Test
 	public void testWriteSensorDataToFile()
@@ -60,15 +60,30 @@ public class Module05Test
 		
 	}
 	
+	/**
+	 * Testing of the function to write the data in a file 
+	 */
 	@Test
 	public void testWriteActuatorDataToFile()
 	{
 		DataUtil dataUtil = new DataUtil();
-		SensorData sensorData =  new SensorData();
 		ActuatorData actData = new ActuatorData();
 		
 		
 		boolean y = dataUtil.writeActuatorDatatofile(actData);
+		assertTrue(y);
+	}
+	
+	/**
+	 * Testing of the function to write the data in the database
+	 */
+	@Test
+	public void testWriteActuatorDataToDBMS()
+	{
+		ActuatorData actData = new ActuatorData();
+		PersistenceUtil persistenceUtil = new PersistenceUtil();
+		
+		boolean y = persistenceUtil.writeActuatorDataToDbms(actData);
 		assertTrue(y);
 	}
 }

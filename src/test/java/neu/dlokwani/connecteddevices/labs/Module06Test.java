@@ -3,10 +3,12 @@
  */
 package neu.dlokwani.connecteddevices.labs;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import neu.dlokwani.connecteddevices.labs.module06.MQTTClientConnector;
 /**
  * Test class for all requisite Module06 functionality.
  * 
@@ -45,9 +47,33 @@ public class Module06Test
 	 * 
 	 */
 	@Test
-	public void testSomething()
+	public void testMqtt_Connect()
 	{
-//		fail("Not yet implemented");
+		MQTTClientConnector mqttClientConnector = new MQTTClientConnector();
+		assertTrue(mqttClientConnector.mqtt_connect());
 	}
+	@Test
+	public void testMqtt_Subscribe()
+	{
+		MQTTClientConnector mqttClientConnector = new MQTTClientConnector();
+		mqttClientConnector.mqtt_connect();
+		assertTrue(mqttClientConnector.mqtt_subscribe());
+	}
+	@Test
+	public void testMqtt_Unsubscribe()
+	{
+		MQTTClientConnector mqttClientConnector = new MQTTClientConnector();
+		mqttClientConnector.mqtt_connect();
+		assertTrue(mqttClientConnector.unSubscribe());
+		
+	}
+	@Test
+	public void testMqtt_Disconnect()
+	{
+		MQTTClientConnector mqttClientConnector = new MQTTClientConnector();
+		mqttClientConnector.mqtt_connect();
+		assertTrue(mqttClientConnector.disconnect());
+	}
+
 	
 }
