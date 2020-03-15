@@ -41,10 +41,10 @@ public class Module06Test
 	{
 	}
 	
-	// test methods
+	
 	
 	/**
-	 * 
+	 * Tests the integrity of the connect method 
 	 */
 	@Test
 	public void testMqtt_Connect()
@@ -52,6 +52,10 @@ public class Module06Test
 		MQTTClientConnector mqttClientConnector = new MQTTClientConnector();
 		assertTrue(mqttClientConnector.mqtt_connect());
 	}
+	
+	/**
+	 * Tests the integrity of the Subscribe method 
+	 */
 	@Test
 	public void testMqtt_Subscribe()
 	{
@@ -59,6 +63,10 @@ public class Module06Test
 		mqttClientConnector.mqtt_connect();
 		assertTrue(mqttClientConnector.mqtt_subscribe());
 	}
+	
+	/**
+	 * Tests the integrity of the unSubscribe method 
+	 */
 	@Test
 	public void testMqtt_Unsubscribe()
 	{
@@ -67,6 +75,10 @@ public class Module06Test
 		assertTrue(mqttClientConnector.unSubscribe());
 		
 	}
+	
+	/**
+	 * Tests the integrity of the disconnect method 
+	 */
 	@Test
 	public void testMqtt_Disconnect()
 	{

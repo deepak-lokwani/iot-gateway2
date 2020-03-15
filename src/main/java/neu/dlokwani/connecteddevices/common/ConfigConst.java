@@ -17,6 +17,7 @@ public class ConfigConst {
 	public static final String CLOUD  = "cloud";
 	public static final String SMTP  = "smtp";
 	public static final String SMTP_CLOUD_SECTION   = SMTP + SECTION_SEPARATOR + CLOUD;
+	public static final String COAP = "coap";
 		    
 	public static final String FROM_ADDRESS_KEY = "fromAddr";
 	public static final String TO_ADDRESS_KEY   = "toAddr";
@@ -30,6 +31,8 @@ public class ConfigConst {
 	public static final boolean ENABLE_AUTH_KEY = true;
 	public static final String SMTP_PROP_ENABLE_TLS_KEY = "mail.smtp.starttls.enable";
 	public static final boolean ENABLE_CRYPT_KEY = true;
+	public static final String COAP_CLOUD = COAP + CLOUD;
+	public static final String COAP_PROTOCOL = "coap";
 	
 	
 	public ConfigConst() {

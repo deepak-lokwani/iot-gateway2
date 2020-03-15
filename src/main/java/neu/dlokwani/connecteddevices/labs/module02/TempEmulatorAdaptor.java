@@ -30,9 +30,7 @@ public class TempEmulatorAdaptor implements Runnable{
 	/**
 	 * @param args
 	 */
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//	}
+
 
 	/*
 	 * Default thread.run method called when the thread starts

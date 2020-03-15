@@ -3,9 +3,13 @@
  */
 package neu.dlokwani.connecteddevices.labs;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import neu.dlokwani.connecteddevices.labs.module07.CoapServerManager;
 
 /**
  * Test class for all requisite Module07 functionality.
@@ -20,9 +24,7 @@ import org.junit.Test;
  * Please note: While some example test cases may be provided, you must write your own for the class.
  */
 public class Module07Test
-{
-	// setup methods
-	
+{	
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -39,15 +41,28 @@ public class Module07Test
 	{
 	}
 	
-	// test methods
-	
 	/**
-	 * 
+	 * Unit Test Method to check the functioning of start method by checking the user-defined flag
 	 */
 	@Test
-	public void testSomething()
+	public void test_server_start()
 	{
-//		fail("Not yet implemented");
+		CoapServerManager coapServerManager = new CoapServerManager();
+		coapServerManager.start();
+		assertTrue(CoapServerManager.isServerRunning);
+		coapServerManager.stop();
+	}
+	
+	/**
+	 * Unit Test Method to check the functioning of addendpoints method by checking the user-defined flag
+	 */
+	@Test
+	public void test_addendpoints()
+	{
+		CoapServerManager coapServerManager = new CoapServerManager();
+		coapServerManager.start();
+		assertTrue(CoapServerManager.areEndPointsAdded);
+		coapServerManager.stop();
 	}
 	
 }
